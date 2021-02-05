@@ -1,0 +1,150 @@
+@import 'setup';
+@import 'variables';
+
+// GENERAL STYLING
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.wrapper {
+  max-width: 1300px;
+  width: 90%;
+  margin: 0 auto;
+  border: solid slategray 1px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body {
+  background: $ice-blue;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.0rem;
+}
+
+p {
+  line-height: 2.8rem;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn,
+h1,
+h2,
+h3 {
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 7.9rem;
+  color: $dandilion;
+  width: 40%;
+}
+
+h2 {
+  font-size: 3.8rem;
+  line-height: 3.8rem;
+  color: $dark-blue;
+}
+
+h3 {
+  font-size: 4rem;
+  line-height: 5.8rem;
+  letter-spacing: 1.3px;
+  color: $ice-blue;
+}
+
+.btn {
+  font-size: 2.24rem;
+  line-height: 41.6px;
+  text-align: center;
+}
+
+// HEADER STYLING
+
+header {
+  background: url(/assets/home-header.jpg) center / cover;
+  padding-top: 50px;
+}
+
+nav {
+  width: 100%;
+}
+
+nav a {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2.9rem;
+  letter-spacing: 1px;
+  color: white;
+  padding: 10px 0 3px;
+  margin: 0 20px;
+  border-bottom: 2px solid $dandilion;
+}
+
+nav a:hover,
+nav a:focus {
+  border-bottom: 2px solid $dandilion;
+}
+
+header {
+  position: relative;
+  height: 80vh;
+}
+
+header img {
+  width: 60%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+// MAIN STYLING
+
+.about-item {
+  width: 50%;
+}
+
+.about h2 {
+  margin: 60px 0 15px;
+}
+
+.about h2::before {
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  background-color: $dandilion;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.n h2::before {
+  content: "\f3c5";
+}
+
+.c h2::before {
+  content: "\f0c0";
+}
+
+.b h2::before {
+  content: "\f15b";
+}
+
+.g h2::before {
+  content: "\f095";
+}
+
+

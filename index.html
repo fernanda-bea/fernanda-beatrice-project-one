@@ -4,20 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Boat Ride Adventures</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://kit.fontawesome.com/8b8fad69b5.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
 
   <header>
 
-    <div class="wrapper">
+    <div class="wrapper flex">
 
       <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <ul class="flex">
+          <li><a href="/">Home</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="post.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
 
@@ -26,31 +29,32 @@
       <img src="./assets/home-box-header.png" alt="A cruise ship out at sea on a sunny day.">
 
     </div>
-
+    <!-- end of wrapper -->
+    
   </header>
 
   <main>
 
-    <section class="info">
+    <section class="about" id="about">
 
-      <div class="wrapper">
+      <div class="wrapper flex">
 
-        <div class="info-item">
+        <div class="about-item n">
           <h2>New Destinations</h2>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem quod, nulla soluta itaque quas eum officiis. Dolorem, sit et voluptate perferendis sequi enim deserunt nulla.</p>
         </div>
 
-        <div class="info-item">
-          <h2>Blog</h2>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem quod, nulla soluta itaque quas eum officiis. Dolorem, sit et voluptate perferendis sequi enim deserunt nulla.</p>
-        </div>
-
-        <div class="info-item">
+        <div class="about-item c">
           <h2>Community</h2>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem quod, nulla soluta itaque quas eum officiis. Dolorem, sit et voluptate perferendis sequi enim deserunt nulla.</p>
         </div>
 
-        <div class="info-item">
+        <div class="about-item b">
+          <h2>Blog</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem quod, nulla soluta itaque quas eum officiis. Dolorem, sit et voluptate perferendis sequi enim deserunt nulla.</p>
+        </div>
+
+        <div class="about-item g">
           <h2>Get in touch</h2>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem quod, nulla soluta itaque quas eum officiis. Dolorem, sit et voluptate perferendis sequi enim deserunt nulla.</p>
         </div>
@@ -66,15 +70,27 @@
       <div class="wrapper">
 
         <div class="program-item">
-          <h3>Our programs</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nam laudantium fugit cum necessitatibus omnis ducimus, nemo optio quasi similique quas velit harum molestias animi incidunt nobis beatae. Ducimus, iste?</p>
-          <a href="" class="btn">Read more</a>
+
+          <img src="./assets/left-image.jpg" alt="A beautiful ship floating on the ocean.">
+
+          <div class="program-content">
+            <h3>Our programs</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nam laudantium fugit cum necessitatibus omnis ducimus, nemo optio quasi similique quas velit harum molestias animi incidunt nobis beatae. Ducimus, iste?</p>
+            <a href="" class="btn">Read more</a>
+          </div>
+
         </div>
 
         <div class="program-item">
-          <h3>New locations</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nam laudantium fugit cum necessitatibus omnis ducimus, nemo optio quasi similique quas velit harum molestias animi incidunt nobis beatae. Ducimus, iste?</p>
-          <a href="" class="btn">Read more</a>
+
+          <div class="program-content">
+            <h3>New locations</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nam laudantium fugit cum necessitatibus omnis ducimus, nemo optio quasi similique quas velit harum molestias animi incidunt nobis beatae. Ducimus, iste?</p>
+            <a href="" class="btn">Read more</a>
+          </div>
+
+          <img src="./assets/right-image.jpg" alt="A birds eye view of the bow of a boat covered in rope.">
+
         </div>
 
       </div>
@@ -83,13 +99,64 @@
     </section>
     <!-- end of programs -->
 
-    
+    <section class="extra">
 
-<p>test</p>
+      <div class="wrapper">
 
+        <h2>Extra Vacation Days?</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, dolores itaque sed unde beatae voluptas voluptate! Molestias fugit vel suscipit sequi nulla, tempore nisi sint esse laudantium ipsam assumenda obcaecati.</p>
+        <a href="" class="btn">Find out more</a>
 
+      </div>
+      <!-- end of wrapper -->
+
+    </section>
+    <!-- end of extra section -->
+
+    <section class="banner">
+
+      <img src="./assets/banner.jpg" alt="People rowing on a lake in the mountains on a sunny day.">
+
+    </section>
+    <!-- end of banner section -->
+
+    <section class="win">
+
+      <div class="wrapper">
+
+        <img src="./assets/small-box.jpg" alt="A woman wearing a hat staring at some ice-bergs.">
+
+        <div class="win-content">
+          <h2>Win trip of a lifetime</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis repellendus ab, explicabo voluptatem dignissimos maxime odit eos tempora? Explicabo natus magnam, vel deserunt doloribus sunt dignissimos incidunt culpa ipsam quidem praesentium laborum repudiandae, quae non officia neque, laudantium odio facilis! Eos perferendis iusto atque minima repellendus consequuntur maiores, ut quidem!</p>
+          <a href="" class="btn">Find out more</a>
+        </div>
+
+      </div>
+      <!-- end of wrapper -->
+
+    </section>
+    <!-- end of win section -->
+
+    <section class="gallery">
+
+      <div class="wrapper">
+
+        <img src="./assets/home-image-3@2x.jpg" alt="A long distance photo of a boat on a tropical day.">
+        <img src="./assets/home-image-1@2x.jpg" alt="A close up photo of the railing on a boat's bow.">
+        <img src="./assets/home-image-2@2x.jpg" alt="A close up photo of where the sail is attached to a boat by rope.">
+
+      </div>
+      <!-- end of wrapper -->
+    </section>
+    <!-- end of gallery section -->
 
   </main>
-  
+
+  <footer>
+    <p>Copyright &copy; 2019 <a href="https://junocollege.com">Juno College</a> | By Bea & Fern</p>
+  </footer>
+
+
 </body>
 </html>
