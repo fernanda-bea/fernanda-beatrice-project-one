@@ -276,7 +276,7 @@ h2 {
 
 h3 {
   font-size: 4rem;
-  line-height: 5.8rem;
+  line-height: 4rem;
   letter-spacing: 1.3px;
   color: #EAFEFC;
 }
@@ -285,6 +285,20 @@ h3 {
   font-size: 2.24rem;
   line-height: 41.6px;
   text-align: center;
+  background-color: #FDD908;
+  color: #0D457F;
+  padding: 4px 10px 3px;
+  margin: 25px 0 20px;
+  border: 5px solid transparent;
+  -webkit-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  border: solid 5px #FDD908;
+  color: white;
+  background-color: #0D457F;
 }
 
 header {
@@ -390,20 +404,26 @@ header img {
   padding-left: 62px;
 }
 
-.programs {
-  background-color: #0D457F;
+.programs .wrapper {
+  width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.program {
-  width: 45%;
+.programs {
+  background-color: #0D457F;
 }
 
-.program p {
-  color: white;
-  margin: 10px 0;
+.program {
+  width: 42%;
+  max-width: 600px;
+  margin-top: -35px;
+}
+
+.program:last-child {
+  margin-bottom: -23px;
+  margin-top: unset;
 }
 
 .program img {
@@ -414,4 +434,23 @@ header img {
 .program img:last-child {
   -webkit-box-shadow: -12px 12px 0 #FDD908;
           box-shadow: -12px 12px 0 #FDD908;
+}
+
+.program-content {
+  margin: 20% 0 10% 20%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.program:last-child .program-content {
+  margin: 20% 20% 10% 0;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.program p {
+  color: white;
+  margin: 10px 0;
 }

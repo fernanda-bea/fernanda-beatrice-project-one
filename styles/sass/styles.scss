@@ -55,7 +55,7 @@ h2 {
 
 h3 {
   font-size: 4rem;
-  line-height: 5.8rem;
+  line-height: 4rem;
   letter-spacing: 1.3px;
   color: $ice-blue;
 }
@@ -64,6 +64,19 @@ h3 {
   font-size: 2.24rem;
   line-height: 41.6px;
   text-align: center;
+  background-color: $dandelion;
+  color: $dark-blue;
+  padding: 4px 10px 3px;
+  margin: 25px 0 20px;
+  border: 5px solid transparent;
+  transition: background-color 0.4s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  border: solid 5px $dandelion;
+  color: white;
+  background-color: $dark-blue;
 }
 
 // HEADER STYLING
@@ -174,21 +187,24 @@ header img {
 
 // PROGRAM SECTION
 
-// .wrapper {
-// }
-
-.programs {
-  background-color: $dark-blue;
+.programs .wrapper {
+  width: 100%;
   justify-content: space-between;
 }
 
-.program {
-  width: 45%;
+.programs {
+  background-color: $dark-blue;
 }
 
-.program p {
-  color: white;
-  margin: 10px 0;
+.program {
+  width: 42%;
+  max-width: 600px;
+  margin-top: -35px;
+}
+
+.program:last-child {
+  margin-bottom: -23px;
+  margin-top: unset;
 }
 
 .program img {
@@ -198,4 +214,20 @@ header img {
 .program img:last-child {
   box-shadow: -12px 12px 0 $dandelion;
 }
+
+.program-content {
+  margin: 20% 0 10% 20%;
+  justify-content: flex-end;
+}
+
+.program:last-child .program-content {
+  margin: 20% 20% 10% 0;
+  justify-content: flex-start;
+}
+
+.program p {
+  color: white;
+  margin: 10px 0;
+}
+
 
