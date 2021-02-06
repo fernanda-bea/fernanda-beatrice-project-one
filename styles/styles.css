@@ -333,16 +333,24 @@ header img {
   top: 27vh;
 }
 
-main {
-  margin-top: 25vh;
+.about {
+  margin: 25vh 0 15vh;
 }
 
 .about .item {
-  width: 50%;
+  width: calc(50% - 20px);
+}
+
+.about .item:nth-child(odd) {
+  margin-right: 10px;
+}
+
+.about .item:nth-child(even) {
+  margin-left: 10px;
 }
 
 .about h2 {
-  margin: 60px 0 15px;
+  margin: 60px 0 10px;
 }
 
 .about h2::before {
@@ -376,4 +384,34 @@ main {
 
 .about .item4 h2::before {
   content: "\f095";
+}
+
+.about p {
+  padding-left: 62px;
+}
+
+.programs {
+  background-color: #0D457F;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.program {
+  width: 45%;
+}
+
+.program p {
+  color: white;
+  margin: 10px 0;
+}
+
+.program img {
+  -webkit-box-shadow: 12px 12px 0 #FDD908;
+          box-shadow: 12px 12px 0 #FDD908;
+}
+
+.program img:last-child {
+  -webkit-box-shadow: -12px 12px 0 #FDD908;
+          box-shadow: -12px 12px 0 #FDD908;
 }
