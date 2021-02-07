@@ -38,6 +38,10 @@ p {
   @include tabletMQ {
     font-size: 2rem;
   }
+  @include mobileMQ {
+  font-size: 1.6rem;
+  line-height: 1.4em;
+  }
 }
 
 a {
@@ -73,6 +77,14 @@ h3 {
   }
 }
 
+h2,
+h3 {
+  @include mobileMQ{
+    font-size: 3rem;
+    line-height: 1em;
+  }
+}
+
 .btn {
   font-size: 2.24rem;
   line-height: 41.6px;
@@ -105,7 +117,6 @@ header {
   
   nav {
     width: 100%;
-    margin-left: calc(5% - 20px);
     @include mobileMQ {
       display: none;
     }
@@ -138,6 +149,11 @@ header {
     @include mobileMQ {
       visibility: visible;
     }
+  }
+
+  i:hover,
+  i:focus {
+    color: $dandelion;
   }
 
   .header-content {

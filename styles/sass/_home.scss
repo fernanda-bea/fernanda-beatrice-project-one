@@ -2,8 +2,57 @@
 
 .home {
 
+  overflow-x: hidden;
+
   header {
     @include header('/assets/home-header.jpg');
+    @include mobileMQ {
+      padding-top: 8px;
+    }
+    
+    .home-wrapper {
+      max-width: 1300px;
+      margin: 0 auto;
+      justify-content: space-between;
+      @include mobileMQ {
+        flex-direction: column;
+      }
+    }
+
+    nav {
+      padding-left: 40px;
+    }
+
+    h1 {
+      font-size: calc(2.5rem + 2.8vw);
+      width: 40%;
+      margin: 0;
+      padding: 0 0 40px 50px;
+      @include mobileMQ {
+        width: 100%;
+        padding: 50px 0 0 25px;
+        margin-bottom: -20px;
+      }
+    }
+
+    img {
+      width: 60%;
+      position: relative;
+      right: calc(-1 * ((100vw - 1300px) / 2));
+      bottom: -100px;
+      @media (max-width: 1300px) {
+        right: 0;
+      }
+      @include mobileMQ {
+        width: 90%;
+        align-self: flex-end;
+        bottom: -50px;
+      }
+    }
+
+
+
+
   }
 
   // MAIN STYLING
@@ -11,11 +60,10 @@
   // ABOUT SECTION
 
   .about {
-    margin: 10vh 0 15vh;
-    // TODO:some vh margins here
+    margin: 100px 0 120px;
   
     @include tabletMQ {
-      margin: 5vh 0 15vh;
+      margin: 120px 0;
     }
   
     .flex {
@@ -40,9 +88,10 @@
     }
     
     h2 {
-      margin: 60px 0 10px;
+      margin: 40px 0 10px;
       @include mobileMQ {
         font-size: 2.5rem;
+        margin-top: 40px;
       }
     }
     
@@ -97,7 +146,6 @@
       justify-content: space-between;
       @include mobileMQ {
         flex-direction: column;
-        width: 90%;
         padding: 0 10%;
       }
     }
@@ -107,18 +155,13 @@
       max-width: 600px;
       margin-top: -35px;
       @include mobileMQ {
-        width: 90%;
-      }
-  
-      .program:last-child {
-        margin-bottom: -23px;
-        margin-top: unset;
+        width: 100%;
       }
       
       img {
         box-shadow: 12px 12px 0 $dandelion;
         @include mobileMQ {
-          margin-left: 12px;
+          margin-left: -6px;
         }
       }
       
@@ -126,7 +169,7 @@
         box-shadow: -12px 12px 0 $dandelion;
         @include mobileMQ {
           order: -1;
-          margin-right: -12px;
+          margin-left: 6px;
         }
       }
   
@@ -142,18 +185,23 @@
           justify-content: flex-start;
         }
         @include mobileMQ {
-          margin: 20% 0;
+          margin: 20% 0 30%;
         }
       }
     }
+
+    .program:last-child {
+      margin-bottom: -23px;
+      margin-top: unset;
+    }
     
-      .program:last-child .program-content {
-        margin: calc(20% + 35px) 20% 10% 0;
-        justify-content: flex-start;
-        @include mobileMQ {
-          margin: 20% 0;
-        }
+    .program:last-child .program-content {
+      margin: 20% 20% 10% 0;
+      justify-content: flex-start;
+      @include mobileMQ {
+        margin: 20% 0;
       }
+    }
     }
     
     
@@ -162,9 +210,6 @@
   .extra .flex {
     padding: 15% 10% 10%;
     justify-content: flex-start;
-    
-    @include mobileMQ {
-    }
   
     h2 {
       padding-bottom: 20px;
