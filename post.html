@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/styles.css">
 </head>
-<body>
+<body class="post">
 
   <header>
 
@@ -24,9 +24,11 @@
         </ul>
       </nav>
 
-      <i class="fa fa-bars"></i>
+      <a href="">
+        <i class="fa fa-bars"></i>
+      </a>
 
-      <h1>Blog</h1>
+      <h2 class="header-content">Blog</h2>
 
     </div>
     <!-- end of header wrapper -->
@@ -35,54 +37,62 @@
 
   <main>
 
-    <div class="wrapper">
+    <div class="flex">
 
-      <article>
+      <div class="right">
 
-        <img src="./assets/blog-post-image.jpg" alt="Part of a boat with an anchor rope in the ocean.">
+        <article>
 
-        <h1>Next destination</h1>
+          <img src="./assets/blog-post-image.jpg" alt="Part of a boat with an anchor rope in the ocean.">
 
-        <div class="meta">
-          Monday October 30, 2019 by Sulaire
+          <div class="content">
+
+            <h1>Next destination</h1>
+            <div class="meta">
+              Monday October 30, 2019 by Sulaire
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto aliquam sint odit voluptatibus debitis vitae velit saepe provident repudiandae quasi praesentium totam, deleniti et voluptates itaque excepturi perferendis consectetur dicta. Nihil est amet, corporis eligendi adipisci rerum dignissimos consectetur, totam molestias ipsa velit doloribus officiis nobis, aspernatur nisi quibusdam animi quidem dolorem cumque ratione.</p>
+            
+            <p>Dolore autem reprehenderit assumenda voluptas fuga, non saepe incidunt. Fuga incidunt pariatur eveniet repellat quis! Voluptates, dolores dolore! Similique impedit consectetur, adipisci ullam soluta aspernatur ea, blanditiis ipsam, illum aut architecto rem placeat! Commodi natus nobis ad rem odit excepturi deserunt tenetur consectetur, et dolorum dignissimos non amet maiores quia dolore earum doloremque culpa dolorem provident veritatis cum quasi vero. Beatae, repellat inventore vero eligendi cumque odit similique? Odio nobis quia consequatur doloribus deleniti tenetur ullam voluptates debitis? Laudantium enim, magnam itaque quis hic impedit quo numquam accusantium rerum nihil et. </p>
+            
+            <p>Ut, fuga. Corrupti maiores voluptates placeat mollitia rerum! Tenetur esse ex maxime ipsam, nobis iure earum veniam inventore animi impedit non! Eaque libero atque aliquid! Sed numquam quae amet! Laborum maiores dignissimos deserunt. Porro illum ipsa qui repudiandae quam enim atque eius esse, ratione commodi incidunt rerum alias beatae optio. Deleniti maxime, officiis cumque laborum rerum sint eveniet expedita. Magni mollitia est rerum perferendis quod eaque quidem in deleniti libero, nobis sint natus consequuntur amet animi, pariatur esse error fugiat maiores perspiciatis fuga vitae tenetur laborum nemo similique! Nam, expedita architecto necessitatibus incidunt quos dicta eveniet voluptatibus omnis. Doloremque rerum praesentium ipsam laudantium! </p>
+            
+            <p>Error optio facere in quas accusamus! Inventore, nemo esse fuga commodi magnam labore vel suscipit excepturi est, fugit eligendi neque, voluptatem velit tempore minus id delectus nobis error magni repellendus illo? Quo praesentium necessitatibus, nobis ipsam placeat ut aperiam facere, repudiandae blanditiis quam vero non ipsa nemo. Inventore beatae magni tenetur illo.</p>
+
+          </div>
+          <!-- end of content -->
+
+        </article>
+
+        <div class="comments">
+
+          <h2>Comments</h2>
+
+          <div class="comment">
+            <img src="./assets/comment-1.jpg" aria-hidden="true">
+            <p>Tuesday Ocotber 9th, 2019 by Ali</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat laudantium, quos, iste quibusdam iure id natus sint, nihil harum assumenda sed excepturi perferendis. Officiis mollitia ratione dolor repellendus voluptates corrupti.</p>
+          </div>
+
+          <div class="comment">
+            <img src="./assets/comment-2.jpg" aria-hidden="true">
+            <p>Wednesday Ocotber 10th, 2019 by Lisa</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat laudantium, quos, iste quibusdam iure id natus sint, nihil harum assumenda sed excepturi perferendis. Officiis mollitia ratione dolor repellendus voluptates corrupti.</p>
+          </div>
+
+          <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email address">
+            <textarea placeholder="Comment" name="user-message" id="user-message" cols="30" rows="10"></textarea>
+            <!-- make sure we style this with resize:none -->
+            <button type="submit">Post Comment</button>
+          </form>
+
         </div>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto aliquam sint odit voluptatibus debitis vitae velit saepe provident repudiandae quasi praesentium totam, deleniti et voluptates itaque excepturi perferendis consectetur dicta. Nihil est amet, corporis eligendi adipisci rerum dignissimos consectetur, totam molestias ipsa velit doloribus officiis nobis, aspernatur nisi quibusdam animi quidem dolorem cumque ratione.</p>
-          
-        <p>Dolore autem reprehenderit assumenda voluptas fuga, non saepe incidunt. Fuga incidunt pariatur eveniet repellat quis! Voluptates, dolores dolore! Similique impedit consectetur, adipisci ullam soluta aspernatur ea, blanditiis ipsam, illum aut architecto rem placeat! Commodi natus nobis ad rem odit excepturi deserunt tenetur consectetur, et dolorum dignissimos non amet maiores quia dolore earum doloremque culpa dolorem provident veritatis cum quasi vero. Beatae, repellat inventore vero eligendi cumque odit similique? Odio nobis quia consequatur doloribus deleniti tenetur ullam voluptates debitis? Laudantium enim, magnam itaque quis hic impedit quo numquam accusantium rerum nihil et. </p>
-        
-        <p>Ut, fuga. Corrupti maiores voluptates placeat mollitia rerum! Tenetur esse ex maxime ipsam, nobis iure earum veniam inventore animi impedit non! Eaque libero atque aliquid! Sed numquam quae amet! Laborum maiores dignissimos deserunt. Porro illum ipsa qui repudiandae quam enim atque eius esse, ratione commodi incidunt rerum alias beatae optio. Deleniti maxime, officiis cumque laborum rerum sint eveniet expedita. Magni mollitia est rerum perferendis quod eaque quidem in deleniti libero, nobis sint natus consequuntur amet animi, pariatur esse error fugiat maiores perspiciatis fuga vitae tenetur laborum nemo similique! Nam, expedita architecto necessitatibus incidunt quos dicta eveniet voluptatibus omnis. Doloremque rerum praesentium ipsam laudantium! </p>
-        
-        <p>Error optio facere in quas accusamus! Inventore, nemo esse fuga commodi magnam labore vel suscipit excepturi est, fugit eligendi neque, voluptatem velit tempore minus id delectus nobis error magni repellendus illo? Quo praesentium necessitatibus, nobis ipsam placeat ut aperiam facere, repudiandae blanditiis quam vero non ipsa nemo. Inventore beatae magni tenetur illo.</p>
-
-      </article>
-
-      <div class="comments">
-
-        <h2>Comments</h2>
-
-        <div class="comment">
-          <img src="./assets/comment-1.jpg" aria-hidden="true">
-          <p>Tuesday Ocotber 9th, 2019 by Ali</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat laudantium, quos, iste quibusdam iure id natus sint, nihil harum assumenda sed excepturi perferendis. Officiis mollitia ratione dolor repellendus voluptates corrupti.</p>
-        </div>
-
-        <div class="comment">
-          <img src="./assets/comment-2.jpg" aria-hidden="true">
-          <p>Wednesday Ocotber 10th, 2019 by Lisa</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat laudantium, quos, iste quibusdam iure id natus sint, nihil harum assumenda sed excepturi perferendis. Officiis mollitia ratione dolor repellendus voluptates corrupti.</p>
-        </div>
-
-        <form>
-          <input type="text" placeholder="Name">
-          <input type="email" placeholder="Email address">
-          <textarea placeholder="Comment" name="user-message" id="user-message" cols="30" rows="10"></textarea>
-          <!-- make sure we style this with resize:none -->
-          <button type="submit">Post Comment</button>
-        </form>
+        <!-- end of comments -->
 
       </div>
-      <!-- end of comments -->
+      <!-- enf of right -->
 
       <aside>
         <img src="./assets/blog-side-image.jpg" alt="View from inside of a boat with the sunset in the background.">

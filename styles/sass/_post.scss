@@ -1,0 +1,69 @@
+.post {
+
+  .wrapper {
+    border: solid red 1px;
+  }
+
+  header {
+      @include header('/assets/blog-header.jpg');
+
+      h2 {
+        @include heading(white);
+        margin-top: 12vh;
+        height: 35vh;
+      }
+    }
+  
+  main .flex {
+    justify-content: space-between;
+  }
+
+  .right {
+
+    width: 60%;
+
+    article {
+
+      border-bottom: solid $dandelion 4px;
+      position: relative;
+      top: -150px;
+      overflow: hidden;
+
+      img {
+        box-shadow: -20px 20px 0 $dandelion;
+        margin-left: 20px;
+
+      }
+  
+      .content {
+
+        border-left: solid $dandelion 4px;
+        padding: 80px;
+        
+        h1 {
+          font-size: 3.8rem;
+          line-height: 3.8rem;
+          color: $dark-blue;
+          // margin: 
+        }
+      }
+    }
+
+  
+
+  }
+  // end of right
+
+  aside {
+    width: 30%;
+    order: -1;
+    background-color: $dark-blue;
+  }
+
+
+
+
+
+
+}
+// the end
