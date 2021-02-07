@@ -1,7 +1,10 @@
 @import 'setup';
 @import 'variables';
+@import 'mixins';
+
 
 // GENERAL STYLING
+
 
 html {
   font-size: 62.5%;
@@ -32,10 +35,14 @@ body {
 p {
   line-height: 2.8rem;
   letter-spacing: 1px;
+  @include tabletMQ {
+    font-size: 2rem;
+  }
 }
 
 a {
   text-decoration: none;
+  color: $dark-blue;
 }
 
 .btn,
@@ -51,6 +58,9 @@ h2 {
   font-size: 3.8rem;
   line-height: 3.8rem;
   color: $dark-blue;
+  @include tabletMQ {
+    font-size: 3.2rem;
+  }
 }
 
 h3 {
@@ -58,6 +68,9 @@ h3 {
   line-height: 4rem;
   letter-spacing: 1.3px;
   color: $ice-blue;
+  @include tabletMQ {
+    font-size: 3.5rem;
+  }
 }
 
 .btn {
@@ -65,18 +78,25 @@ h3 {
   line-height: 41.6px;
   text-align: center;
   background-color: $dandelion;
-  color: $dark-blue;
   padding: 4px 10px 3px;
   margin: 25px 0 20px;
   border: 5px solid transparent;
   transition: background-color 0.4s ease;
+  @include tabletMQ {
+    font-size: 2rem;
+  }
 }
 
 .btn:hover,
 .btn:focus {
   border: solid 5px $dandelion;
   color: white;
-  background-color: $dark-blue;
+  background-color: transparent;
+}
+
+.btn2:hover,
+.btn2:focus {
+  color: $dark-blue;
 }
 
 // HEADER STYLING
@@ -84,150 +104,329 @@ h3 {
 header {
   background: url(/assets/home-header.jpg) center / cover;
   padding-top: 60px;
+  
+  nav {
+    width: 100%;
+    margin-left: calc(5% - 20px);
+
+    a {
+      font-weight: bold;
+      font-size: 2rem;
+      line-height: 2.9rem;
+      letter-spacing: 1px;
+      color: white;
+      padding: 10px 0 3px;
+      margin: 0 20px;
+      border-bottom: 2px solid transparent;
+    }
+
+    a:hover,
+    a:focus {
+      border-bottom: 2px solid $dandelion;
+    }
+  }
+
+  .header-content {
+    height: 70vh;
+    justify-content: space-between;
+    @include laptopMQ {
+      height: 50vh;
+    }
+    @include tabletMQ {
+      height: 60vh;
+    }
+    @include tabletpMQ {
+      height: 30vh;
+    }
+  }
+  
+  h1 {
+    font-size: calc(2rem + 4vw);
+    line-height: 1.2em;
+    color: $dandelion;
+    width: calc(45% - 5%);
+    max-width: 600px;
+    align-self: flex-end;
+    margin: 0 0 4% 5%;
+    @include tabletpMQ {
+      font-size: calc(2.8rem + 2vw);
+      margin-bottom: 4vh; 
+      // TODO:some vh margins here
+    }
+  }
+  
+  .header-image {
+    width: 55%;
+    max-width: 900px;
+    margin: 6% 0 -15%;
+    @include laptopMQ {
+      max-width: 650px;
+    }
+    @include tabletMQ {
+      width: 53%;
+    }
+  }
 }
 
-nav {
-  width: 100%;
-}
-
-nav a {
-  font-weight: bold;
-  font-size: 2rem;
-  line-height: 2.9rem;
-  letter-spacing: 1px;
-  color: white;
-  padding: 10px 0 3px;
-  margin: 0 20px;
-  border-bottom: 2px solid transparent;
-}
-
-nav a:hover,
-nav a:focus {
-  border-bottom: 2px solid $dandelion;
-}
-
-.header-content {
-  height: 80vh;
-}
-
-h1 {
-  font-size: calc(4rem + 2vw);
-  color: $dandelion;
-  width: 45%;
-  max-width: 600px;
-  align-self: flex-end;
-  margin-bottom: 7vh;
-}
-
-header img {
-  width: 58%;
-  position: absolute;
-  right: 0;
-  top: 27vh;
-}
+// MAIN STYLING
 
 // ABOUT SECTION
 
 .about {
-  margin: 25vh 0 15vh;
-}
+  margin: 10vh 0 15vh;
+  // TODO:some vh margins here
 
-.about .item {
-  width: calc(50% - 20px);
-}
+  @include tabletMQ {
+    margin: 5vh 0 15vh;
+  }
 
-.about .item:nth-child(odd) {
-  margin-right: 10px;
-}
+  .flex {
+    @include tabletpMQ {
+      flex-direction: column;
+    }
+  }
 
-.about .item:nth-child(even) {
-  margin-left: 10px;
-}
-
-.about h2 {
-  margin: 60px 0 10px;
-}
-
-.about h2::before {
-  font-weight: 900;
-  font-family: "Font Awesome 5 Free";
-  font-size: 2.5rem;
-  font-style: normal;
-  line-height: 30px;
-  text-align: center;
-  vertical-align: middle;
-  background-color: $dandelion;
-  border-radius: 50%;
-  padding: 10px;
-  margin: 0 10px 5px 0;
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-}
-
-.about .item1 h2::before {
-  content: "\f3c5";
-}
-
-.about .item2 h2::before {
-  content: "\f0c0";
-}
-
-.about .item3 h2::before {
-  content: "\f15b";
-}
-
-.about .item4 h2::before {
-  content: "\f095";
-}
-
-.about p {
-  padding-left: 62px;
+  .item {
+    width: calc(50% - 20px);
+    @include tabletpMQ {
+      width: 100%;
+    }
+  }
+  
+  .item:nth-child(odd) {
+    margin-right: 10px;
+  }
+  
+  .item:nth-child(even) {
+    margin-left: 10px;
+  }
+  
+  h2 {
+    margin: 60px 0 10px;
+    @include mobileMQ {
+      font-size: 2.5rem;
+    }
+  }
+  
+  h2::before {
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    font-size: 2.5rem;
+    font-style: normal;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: $dandelion;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0 10px 5px 0;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+  }
+  
+  .item1 h2::before {
+    content: "\f3c5";
+  }
+  
+  .item2 h2::before {
+    content: "\f0c0";
+  }
+  
+  .item3 h2::before {
+    content: "\f15b";
+  }
+  
+  .item4 h2::before {
+    content: "\f095";
+  }
+  
+  p {
+    padding-left: 62px;
+    @include mobileMQ {
+      padding-right: 10px;
+    }
+  }
 }
 
 // PROGRAM SECTION
 
-.programs .wrapper {
-  width: 100%;
-  justify-content: space-between;
-}
-
 .programs {
   background-color: $dark-blue;
+
+  .wrapper {
+    width: 100%;
+    justify-content: space-between;
+    @include mobileMQ {
+      flex-direction: column;
+      width: 90%;
+      padding: 0 10%;
+    }
+  }
+  
+  .program {
+    width: 42%;
+    max-width: 600px;
+    margin-top: -35px;
+    @include mobileMQ {
+      width: 90%;
+    }
+
+    .program:last-child {
+      margin-bottom: -23px;
+      margin-top: unset;
+    }
+    
+    img {
+      box-shadow: 12px 12px 0 $dandelion;
+      @include mobileMQ {
+        margin-left: 12px;
+      }
+    }
+    
+    img:last-child {
+      box-shadow: -12px 12px 0 $dandelion;
+      @include mobileMQ {
+        order: -1;
+        margin-right: -12px;
+      }
+    }
+
+    p {
+      color: white;
+      margin: 10px 0;
+    }
+
+    .program-content {
+      margin: 20% 0 10% 20%;
+      justify-content: flex-end;
+      @include tabletMQ {
+        justify-content: flex-start;
+      }
+      @include mobileMQ {
+        margin: 20% 0;
+      }
+    }
+  }
+
+  .program:last-child .program-content {
+    margin: calc(20% + 35px) 20% 10% 0;
+    justify-content: flex-start;
+    @include mobileMQ {
+      margin: 20% 0;
+    }
+  }
 }
 
-.program {
-  width: 42%;
-  max-width: 600px;
-  margin-top: -35px;
-}
 
-.program:last-child {
-  margin-bottom: -23px;
-  margin-top: unset;
-}
+// EXTRA SECTION
 
-.program img {
-  box-shadow: 12px 12px 0 $dandelion;
-}
-
-.program img:last-child {
-  box-shadow: -12px 12px 0 $dandelion;
-}
-
-.program-content {
-  margin: 20% 0 10% 20%;
-  justify-content: flex-end;
-}
-
-.program:last-child .program-content {
-  margin: 20% 20% 10% 0;
+.extra .flex {
+  padding: 15% 10% 10%;
   justify-content: flex-start;
+  
+  @include mobileMQ {
+  }
+
+  h2 {
+    padding-bottom: 20px;
+  }
 }
 
-.program p {
-  color: white;
-  margin: 10px 0;
+// BANNER SECTION
+.banner img {
+  @include mobileMQ {
+    height: 35vh;
+    object-fit: cover;
+  }
 }
 
 
+// WIN SECTION
+
+.win {
+  padding: 10%;
+
+  .flex {
+    align-items: center;
+    @include tabletMQ {
+      flex-direction: column;
+    }
+  }
+  
+  .win-content {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 70%;
+    @include laptopMQ {
+      width: 55%;
+    }
+    @include tabletMQ {
+      width: 100%;
+      align-items: center;
+    }
+    @include mobileMQ {
+      align-items: flex-start;
+    }
+  }
+  
+  .image-container {
+    width: calc(30% - 92px);
+    height: 100%;
+    margin: -12px 80px 0 -12px;
+    box-shadow: -12px 12px 0 $dandelion;
+    @include laptopMQ {
+      width: calc(45% - 62px);
+      margin-right: calc(50px - 12px);
+    }
+    @include tabletMQ {
+      margin: 0px -12px 60px 0px;
+      width: 60%;
+    }
+    @include mobileMQ {
+      width: 100%;
+    }
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+}
+
+// GALLERY SECTION
+
+.gallery {
+  background-color: $dark-blue;
+  padding: 6%;
+  
+  .flex {
+    justify-content: space-between;
+  }
+
+  img {
+    width: 32%;
+    object-fit: cover;
+    @include mobileMQ {
+      width: 47%;
+    }
+  }
+
+  img:last-child {
+    @include mobileMQ {
+      display: none;
+    }
+  }
+}
+
+// FOOTER
+
+footer {
+  background-color: $dandelion;
+  color: $dark-blue;
+  text-align: center;
+  padding: 10px 20px;
+  p {
+    line-height: 1em;
+    font-size: 1.5rem;
+  }
+}
