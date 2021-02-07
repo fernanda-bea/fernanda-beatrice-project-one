@@ -1,3 +1,50 @@
-test {
-    
-}
+.contact {
+
+  header {
+    @include header('../assets/contact-header.jpg');
+
+    h1 {
+      @include heading(white);
+      margin-top: 12vh;
+      height: 35vh;
+      max-width: unset;
+      width: auto;
+    }
+  }
+
+  main {
+    .wrapper {
+      justify-content: space-between;
+    }
+
+    .contact-info {
+      width: 30%;
+      padding: 30px;
+
+      .socialMedia {
+        margin: 20px 0 20px -10px;
+        li {
+          text-align: center;
+          width: 40px;
+          display: inline-block;
+          font-size: 2.5rem;
+        }
+        a {
+          padding: 3px;
+        }
+      } // end of social media
+      .address {
+        margin-top: 40px;
+      }
+    } //end of contact info
+
+    form {
+      @include form($dark-blue, white, $dandelion, $dark-blue, white);
+      box-shadow: 15px 15px 0 $dandelion;
+      position: relative;
+      top: -150px;
+    }
+
+  } // end of main
+
+} //end of contact nest

@@ -19,6 +19,58 @@
   }
 }
 
+@mixin form($bgdcolor, $color, $btnbackground, $btncolor, $hover) {
+  justify-content: space-between;
+  background-color: $bgdcolor;
+  width: 60%;
+  padding: 25px 40px;
+
+  * {
+    color: $color;
+    background-color: transparent;
+    border: 2px solid $dandelion;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-top: 30px;
+  }
+
+  input {
+    width: 45%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  
+  textarea::placeholder,
+  input::placeholder {
+    opacity: 1;
+  }
+
+  textarea {
+    resize: none;
+    width: 100%;
+    font-family: 'Roboto';
+    height: 180px;
+  }
+
+  button {
+    font-size: 2rem;
+    line-height: 1em;
+    width: 100%;
+    background-color: $btnbackground;
+    color: $btncolor;
+    border: 2px solid transparent;
+    transition: background-color 0.4s ease;
+  }
+
+  button:hover,
+  button:focus {
+  border: solid 2px $dandelion;
+  background-color: transparent;
+  color: $hover;
+  }
+}
+
 @mixin laptopMQ {
   @media (max-width:1334px) {
     @content;

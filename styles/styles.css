@@ -929,10 +929,213 @@ footer p {
   color: #0D457F;
 }
 
+.post .right form {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: transparent;
+  width: 60%;
+  padding: 25px 40px;
+  width: 100%;
+}
+
+.post .right form * {
+  color: #0D457F;
+  background-color: transparent;
+  border: 2px solid #FDD908;
+  font-size: 1.5rem;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.post .right form input {
+  width: 45%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.post .right form textarea::-webkit-input-placeholder,
+.post .right form input::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.post .right form textarea:-ms-input-placeholder,
+.post .right form input:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.post .right form textarea::-ms-input-placeholder,
+.post .right form input::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.post .right form textarea::placeholder,
+.post .right form input::placeholder {
+  opacity: 1;
+}
+
+.post .right form textarea {
+  resize: none;
+  width: 100%;
+  font-family: 'Roboto';
+  height: 180px;
+}
+
+.post .right form button {
+  font-size: 2rem;
+  line-height: 1em;
+  width: 100%;
+  background-color: #0D457F;
+  color: #FDD908;
+  border: 2px solid transparent;
+  -webkit-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
+}
+
+.post .right form button:hover,
+.post .right form button:focus {
+  border: solid 2px #FDD908;
+  background-color: transparent;
+  color: #0D457F;
+}
+
 .post aside {
   width: 30%;
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
   background-color: #0D457F;
+}
+
+.contact header {
+  background: url("../assets/contact-header.jpg") center/cover;
+  padding-top: 60px;
+}
+
+.contact header h1 {
+  font-size: calc(2rem + 4vw);
+  text-shadow: 2px 2px 4px black;
+  line-height: 1.2em;
+  color: white;
+  width: calc(45% - 5%);
+  max-width: 600px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 0 0 4% 5%;
+  margin-top: 12vh;
+  height: 35vh;
+  max-width: unset;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .contact header h1 {
+    font-size: calc(2.8rem + 2vw);
+    margin-bottom: 4vh;
+  }
+}
+
+.contact main .wrapper {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact main .contact-info {
+  width: 30%;
+  padding: 30px;
+}
+
+.contact main .contact-info .socialMedia {
+  margin: 20px 0 20px -10px;
+}
+
+.contact main .contact-info .socialMedia li {
+  text-align: center;
+  width: 40px;
+  display: inline-block;
+  font-size: 2.5rem;
+}
+
+.contact main .contact-info .socialMedia a {
+  padding: 3px;
+}
+
+.contact main .contact-info .address {
+  margin-top: 40px;
+}
+
+.contact main form {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #0D457F;
+  width: 60%;
+  padding: 25px 40px;
+  -webkit-box-shadow: 15px 15px 0 #FDD908;
+          box-shadow: 15px 15px 0 #FDD908;
+  position: relative;
+  top: -150px;
+}
+
+.contact main form * {
+  color: white;
+  background-color: transparent;
+  border: 2px solid #FDD908;
+  font-size: 1.5rem;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.contact main form input {
+  width: 45%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.contact main form textarea::-webkit-input-placeholder,
+.contact main form input::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.contact main form textarea:-ms-input-placeholder,
+.contact main form input:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.contact main form textarea::-ms-input-placeholder,
+.contact main form input::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.contact main form textarea::placeholder,
+.contact main form input::placeholder {
+  opacity: 1;
+}
+
+.contact main form textarea {
+  resize: none;
+  width: 100%;
+  font-family: 'Roboto';
+  height: 180px;
+}
+
+.contact main form button {
+  font-size: 2rem;
+  line-height: 1em;
+  width: 100%;
+  background-color: #FDD908;
+  color: #0D457F;
+  border: 2px solid transparent;
+  -webkit-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
+}
+
+.contact main form button:hover,
+.contact main form button:focus {
+  border: solid 2px #FDD908;
+  background-color: transparent;
+  color: white;
 }
