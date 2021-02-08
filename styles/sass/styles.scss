@@ -169,11 +169,7 @@ header {
       height: 30vh;
     }
   }
-  
-  h1 {
-    @include heading($dandelion);
-  }
-  
+
   .header-image {
     width: 55%;
     max-width: 900px;

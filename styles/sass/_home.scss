@@ -5,14 +5,13 @@
   overflow-x: hidden;
 
   header {
-    @include header('/assets/home-header.jpg');
+    @include header('../assets/home-header.jpg');
     @include mobileMQ {
       padding-top: 8px;
     }
     
-    .home-wrapper {
-      max-width: 1300px;
-      margin: 0 auto;
+    .wrapper {
+      width: 100%;
       justify-content: space-between;
       @include mobileMQ {
         flex-direction: column;
@@ -24,7 +23,7 @@
     }
 
     h1 {
-      font-size: calc(2.5rem + 2.8vw);
+      @include heading($dandelion);
       width: 40%;
       margin: 0;
       padding: 0 0 40px 50px;

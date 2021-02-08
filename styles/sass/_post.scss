@@ -1,8 +1,8 @@
 .post {
 
-  .wrapper {
-    border: solid red 1px;
-  }
+  // * {
+  //   border: solid red 1px;
+  // }
 
   header {
       @include header('/assets/blog-header.jpg');
@@ -57,11 +57,32 @@
   }
   // end of right
 
-  aside {
+  .left {
     width: 30%;
     order: -1;
-    background-color: $dark-blue;
+
+    aside {
+      justify-content: flex-end;
+      background-color: $dark-blue;
+      position: relative;
+      border-left: 30px $ice-blue solid;
+
+      img {
+        position: relative;
+        left: -50px;
+        top: -10px;
+        margin-right: -20px;
+      }
+
+      .content {
+        width: 90%;
+      }
+
+    }
+
   }
+
+ 
 
 
 
