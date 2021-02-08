@@ -495,18 +495,19 @@ footer p {
   padding: 0 0 40px 50px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   .home header h1 {
-    font-size: calc(2.8rem + 2vw);
-    margin-bottom: 4vh;
+    width: 45%;
+    font-size: calc(1.5rem + 2.8vw);
   }
 }
 
 @media (max-width: 640px) {
   .home header h1 {
     width: 100%;
-    padding: 50px 0 0 25px;
+    padding: 60px 20px 0 25px;
     margin-bottom: -20px;
+    font-size: calc(2.5rem + 2.8vw);
   }
 }
 
@@ -520,6 +521,12 @@ footer p {
 @media (max-width: 1300px) {
   .home header img {
     right: 0;
+  }
+}
+
+@media (max-width: 950px) {
+  .home header img {
+    width: 55%;
   }
 }
 
@@ -539,6 +546,12 @@ footer p {
 @media (max-width: 1024px) {
   .home .about {
     margin: 120px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .home .about {
+    margin-top: 60px;
   }
 }
 
@@ -565,8 +578,20 @@ footer p {
   margin-right: 10px;
 }
 
+@media (max-width: 768px) {
+  .home .about .item:nth-child(odd) {
+    margin-right: 0;
+  }
+}
+
 .home .about .item:nth-child(even) {
   margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .home .about .item:nth-child(even) {
+    margin-left: 0;
+  }
 }
 
 .home .about h2 {
@@ -748,6 +773,12 @@ footer p {
   padding: 10%;
 }
 
+@media (max-width: 640px) {
+  .home .win {
+    padding-top: 15%;
+  }
+}
+
 .home .win .flex {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -873,13 +904,6 @@ footer p {
   margin: 0 0 4% 5%;
   margin-top: 12vh;
   height: 35vh;
-}
-
-@media (max-width: 768px) {
-  .post header h2 {
-    font-size: calc(2.8rem + 2vw);
-    margin-bottom: 4vh;
-  }
 }
 
 .post main .flex {
@@ -1031,13 +1055,6 @@ footer p {
   height: 35vh;
 }
 
-@media (max-width: 768px) {
-  .contact header h1 {
-    font-size: calc(2.8rem + 2vw);
-    margin-bottom: 4vh;
-  }
-}
-
 .contact main .wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -1049,18 +1066,18 @@ footer p {
   padding: 30px;
 }
 
-.contact main .contact-info .socialMedia {
+.contact main .contact-info .social-media {
   margin: 20px 0 20px -10px;
 }
 
-.contact main .contact-info .socialMedia li {
+.contact main .contact-info .social-media li {
   text-align: center;
   width: 40px;
   display: inline-block;
   font-size: 2.5rem;
 }
 
-.contact main .contact-info .socialMedia a {
+.contact main .contact-info .social-media a {
   padding: 3px;
 }
 

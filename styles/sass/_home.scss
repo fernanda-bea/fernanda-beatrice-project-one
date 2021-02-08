@@ -4,6 +4,8 @@
 
   overflow-x: hidden;
 
+  // HEADER 
+
   header {
     @include header('../assets/home-header.jpg');
     @include mobileMQ {
@@ -27,10 +29,15 @@
       width: 40%;
       margin: 0;
       padding: 0 0 40px 50px;
+      @include w950MQ {
+        width: 45%;
+        font-size: calc(1.5rem + 2.8vw);
+      }
       @include mobileMQ {
         width: 100%;
-        padding: 50px 0 0 25px;
+        padding: 60px 20px 0 25px;
         margin-bottom: -20px;
+        font-size: calc(2.5rem + 2.8vw);
       }
     }
 
@@ -42,17 +49,17 @@
       @media (max-width: 1300px) {
         right: 0;
       }
+      @include w950MQ {
+        width: 55%;
+      }
       @include mobileMQ {
         width: 90%;
         align-self: flex-end;
         bottom: -50px;
       }
     }
-
-
-
-
   }
+  // end of header
 
   // MAIN STYLING
 
@@ -63,6 +70,9 @@
   
     @include tabletMQ {
       margin: 120px 0;
+    }
+    @include mobileMQ {
+      margin-top: 60px;
     }
   
     .flex {
@@ -80,10 +90,16 @@
     
     .item:nth-child(odd) {
       margin-right: 10px;
+      @include tabletpMQ {
+        margin-right: 0;
+      }
     }
     
     .item:nth-child(even) {
       margin-left: 10px;
+      @include tabletpMQ {
+        margin-left: 0;
+      }
     }
     
     h2 {
@@ -134,8 +150,9 @@
       }
     }
   }
+  // end of about
     
-    // PROGRAM SECTION
+  // PROGRAMS SECTION
     
   .programs {
     background-color: $dark-blue;
@@ -201,10 +218,10 @@
         margin: 20% 0;
       }
     }
-    }
+  }
+  // end of programs
     
-    
-    // EXTRA SECTION
+  // EXTRA SECTION
     
   .extra .flex {
     padding: 15% 10% 10%;
@@ -216,18 +233,21 @@
   }
   
   // BANNER SECTION
+
   .banner img {
     @include mobileMQ {
       height: 35vh;
       object-fit: cover;
     }
-    }
-    
+  }
     
   // WIN SECTION
   
   .win {
     padding: 10%;
+    @include mobileMQ {
+      padding-top: 15%;
+    }
   
     .flex {
       align-items: center;
@@ -274,6 +294,7 @@
       margin-bottom: 20px;
     }
   }
+  // end of win
     
   // GALLERY SECTION
   
@@ -299,4 +320,6 @@
       }
     }
   }
+  // end of gallery
 }
+// end of home
