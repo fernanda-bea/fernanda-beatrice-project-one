@@ -909,65 +909,173 @@ footer p {
   height: 35vh;
 }
 
-.post main .flex {
+.post main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.post .right {
+@media (max-width: 768px) {
+  .post main {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 10%;
+  }
+}
+
+.post main .left {
+  width: 30%;
+}
+
+@media (max-width: 768px) {
+  .post main .left {
+    width: 80%;
+  }
+}
+
+.post main .left aside {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: #0D457F;
+  position: relative;
+  border-left: 30px #EAFEFC solid;
+}
+
+.post main .left aside img {
+  position: relative;
+  left: -50px;
+  top: -10px;
+  margin-right: -20px;
+}
+
+.post main .left aside .content {
+  width: 90%;
+  padding: 0px 15px 40px 0px;
+  color: white;
+}
+
+.post main .left aside .content h3 {
+  font-size: 2rem;
+  color: #FDD908;
+  letter-spacing: 0.3rem;
+  margin-top: 40px;
+}
+
+.post main .left aside .content li {
+  list-style-position: inside;
+  line-height: 3.3rem;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 640px) {
+  .post main .left aside .content li {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.post main .right {
   width: 60%;
 }
 
-.post .right article {
+@media (max-width: 768px) {
+  .post main .right {
+    width: 80%;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+
+.post main .right article {
   border-bottom: solid #FDD908 4px;
   position: relative;
   top: -150px;
   overflow: hidden;
 }
 
-.post .right article img {
+.post main .right article img {
   -webkit-box-shadow: -20px 20px 0 #FDD908;
           box-shadow: -20px 20px 0 #FDD908;
   margin-left: 20px;
 }
 
-.post .right article .content {
+.post main .right article .content {
   border-left: solid #FDD908 4px;
   padding: 80px 80px 100px 120px;
 }
 
-.post .right article .content h1 {
+@media (max-width: 768px) {
+  .post main .right article .content {
+    border-right: solid #FDD908 4px;
+    padding: 80px 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .post main .right article .content {
+    border: unset;
+  }
+}
+
+.post main .right article .content h1 {
   font-size: 3.8rem;
   line-height: 3.8rem;
   color: #0D457F;
   margin-bottom: 20px;
 }
 
-.post .right article .content p {
+@media (max-width: 640px) {
+  .post main .right article .content h1 {
+    font-size: 2.8rem;
+  }
+}
+
+.post main .right article .content p {
   margin-top: 40px;
 }
 
-.post .right .comments h2 {
-  margin-bottom: 30px;
+.post main .comments {
+  margin-top: -10%;
 }
 
-.post .right .comments .comment {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+@media (max-width: 640px) {
+  .post main .comments {
+    margin-top: -25%;
+  }
 }
 
-.post .right .comments .comment img {
-  width: 20%;
+.post main .comments .comment {
+  margin: 50px 0;
 }
 
-.post .right .comments .comment text {
-  width: 50%;
+.post main .comments .comment img {
+  width: 10%;
+  max-width: 90px;
+  min-width: 60px;
+  height: 100%;
+  margin-right: 35px;
 }
 
-.post .right form {
+.post main .comments .comment .text {
+  width: 75%;
+}
+
+@media (max-width: 640px) {
+  .post main .comments .comment .text {
+    width: 100%;
+  }
+}
+
+.post main .comments .comment .text p:first-child {
+  font-weight: bolder;
+  color: #0D457F;
+  margin-bottom: 10px;
+}
+
+.post main form {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -975,9 +1083,16 @@ footer p {
   width: 60%;
   padding: 25px 40px;
   width: 100%;
+  margin-bottom: 8%;
 }
 
-.post .right form * {
+@media (max-width: 640px) {
+  .post main form {
+    padding: 0;
+  }
+}
+
+.post main form * {
   color: #0D457F;
   background-color: transparent;
   border: 2px solid #FDD908;
@@ -986,41 +1101,47 @@ footer p {
   margin-top: 30px;
 }
 
-.post .right form input {
+.post main form input {
   width: 45%;
   border-top: none;
   border-left: none;
   border-right: none;
 }
 
-.post .right form textarea::-webkit-input-placeholder,
-.post .right form input::-webkit-input-placeholder {
+@media (max-width: 768px) {
+  .post main form input {
+    width: 100%;
+  }
+}
+
+.post main form textarea::-webkit-input-placeholder,
+.post main form input::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.post .right form textarea:-ms-input-placeholder,
-.post .right form input:-ms-input-placeholder {
+.post main form textarea:-ms-input-placeholder,
+.post main form input:-ms-input-placeholder {
   opacity: 1;
 }
 
-.post .right form textarea::-ms-input-placeholder,
-.post .right form input::-ms-input-placeholder {
+.post main form textarea::-ms-input-placeholder,
+.post main form input::-ms-input-placeholder {
   opacity: 1;
 }
 
-.post .right form textarea::placeholder,
-.post .right form input::placeholder {
+.post main form textarea::placeholder,
+.post main form input::placeholder {
   opacity: 1;
 }
 
-.post .right form textarea {
+.post main form textarea {
   resize: none;
   width: 100%;
   font-family: 'Roboto';
   height: 180px;
 }
 
-.post .right form button {
+.post main form button {
   font-size: 2rem;
   line-height: 1em;
   width: 100%;
@@ -1031,53 +1152,17 @@ footer p {
   transition: background-color 0.4s ease;
 }
 
-.post .right form button:hover,
-.post .right form button:focus {
+.post main form button:hover,
+.post main form button:focus {
   border: solid 2px #FDD908;
   background-color: transparent;
   color: #0D457F;
 }
 
-.post .left {
-  width: 30%;
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
-}
-
-.post .left aside {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  background-color: #0D457F;
-  position: relative;
-  border-left: 30px #EAFEFC solid;
-}
-
-.post .left aside img {
-  position: relative;
-  left: -50px;
-  top: -10px;
-  margin-right: -20px;
-}
-
-.post .left aside .content {
-  width: 90%;
-  padding: 0px 15px 40px 0px;
-  color: white;
-}
-
-.post .left aside .content h3 {
-  font-size: 2rem;
-  color: #FDD908;
-  letter-spacing: 0.3rem;
-  margin-top: 40px;
-}
-
-.post .left aside .content li {
-  list-style-position: inside;
-  line-height: 3.3rem;
-  letter-spacing: 1px;
+@media (max-width: 640px) {
+  .post main form {
+    padding: 0;
+  }
 }
 
 .contact header {
@@ -1140,6 +1225,12 @@ footer p {
   top: -150px;
 }
 
+@media (max-width: 640px) {
+  .contact main form {
+    padding: 0;
+  }
+}
+
 .contact main form * {
   color: white;
   background-color: transparent;
@@ -1154,6 +1245,12 @@ footer p {
   border-top: none;
   border-left: none;
   border-right: none;
+}
+
+@media (max-width: 768px) {
+  .contact main form input {
+    width: 100%;
+  }
 }
 
 .contact main form textarea::-webkit-input-placeholder,

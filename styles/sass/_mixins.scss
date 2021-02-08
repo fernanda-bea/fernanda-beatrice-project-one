@@ -17,6 +17,9 @@
   background-color: $bgdcolor;
   width: 60%;
   padding: 25px 40px;
+  @include mobileMQ {
+    padding: 0;
+  }
 
   * {
     color: $color;
@@ -32,6 +35,9 @@
     border-top: none;
     border-left: none;
     border-right: none;
+    @include tabletpMQ {
+      width: 100%;
+    }
   }
   
   textarea::placeholder,

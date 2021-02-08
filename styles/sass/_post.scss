@@ -10,117 +10,144 @@
       }
     }
   
-  main .flex {
+  main {
     justify-content: space-between;
-  }
-
-  .right {
-
-    width: 60%;
-
-    article {
-
-      border-bottom: solid $dandelion 4px;
-      position: relative;
-      top: -150px;
-      overflow: hidden;
-
-      img {
-        box-shadow: -20px 20px 0 $dandelion;
-        margin-left: 20px;
-
-      }
-  
-      .content {
-
-        border-left: solid $dandelion 4px;
-        padding: 80px 80px 100px 120px;
-        
-        h1 {
-          font-size: 3.8rem;
-          line-height: 3.8rem;
-          color: $dark-blue;
-          margin-bottom: 20px;
-        }
-
-        p {
-          margin-top: 40px; 
-        }
-      }
+    @include tabletpMQ {
+      justify-content: center;
+      padding-bottom: 10%;
     }
+
+    .left {
+      width: 30%;
+      @include tabletpMQ {
+        width: 80%;
+      }
+
+      aside {
+        justify-content: flex-end;
+        background-color: $dark-blue;
+        position: relative;
+        border-left: 30px $ice-blue solid;
+        img {
+          position: relative;
+          left: -50px;
+          top: -10px;
+          margin-right: -20px;
+        }
+        
+        .content {
+          width: 90%;
+          padding: 0px 15px 40px 0px;
+          color: white;
+          h3 {
+            font-size: 2rem;
+            color: $dandelion;
+            letter-spacing: 0.3rem;
+            margin-top: 40px;
+          }
+          li{
+            list-style-position: inside;
+            line-height: 3.3rem;
+            letter-spacing: 1px;
+            @include mobileMQ {
+              font-size: 1.5rem;
+              line-height: 2rem;
+            }
+          }
+        }
+
+      }
+      //end of aside
+    }
+    //end of left
+
+    .right {
+      width: 60%;
+      @include tabletpMQ {
+        width: 80%;
+        order: -1;
+      }
+
+      article {
+        border-bottom: solid $dandelion 4px;
+        position: relative;
+        top: -150px;
+        overflow: hidden;
+        img {
+          box-shadow: -20px 20px 0 $dandelion;
+          margin-left: 20px;
+        }
+    
+        .content {
+          border-left: solid $dandelion 4px;
+          padding: 80px 80px 100px 120px;
+          @include tabletpMQ {
+            border-right: solid $dandelion 4px;
+            padding: 80px 40px;
+          }
+          @include mobileMQ {
+            border: unset;
+          }
+          
+          h1 {
+            font-size: 3.8rem;
+            line-height: 3.8rem;
+            color: $dark-blue;
+            margin-bottom: 20px;
+            @include mobileMQ {
+              font-size: 2.8rem;
+            }
+          }
+
+          p {
+            margin-top: 40px; 
+          }
+        }
+      }
+      //end of article
+    }
+    // end of right
 
     .comments {
-
-      h2 {
-        margin-bottom: 30px;
+      margin-top: -10%;
+      @include mobileMQ {
+        margin-top: -25%;
       }
-
       .comment {
-        flex-direction: column; //this not working
-
+        margin: 50px 0;
         img {
-          width: 20%;
+          width: 10%;
+          max-width: 90px;
+          min-width:60px;
+          height: 100%;
+          margin-right: 35px;
         }
-
-        text {
-          width: 50%; //these are just test sizes to notice change
+        .text {
+          width: 75%;
+          @include mobileMQ {
+            width: 100%;
+          }
+          p:first-child {
+            font-weight: bolder;
+            color: $dark-blue;
+            margin-bottom: 10px;
+          }
         }
-
       }
+      //end of comment
     }
+    // end of comments
 
     form {
       @include form(transparent, $dark-blue, $dark-blue, $dandelion, $dark-blue);
       width: 100%;
+      margin-bottom: 8%;
+      @include mobileMQ {
+        padding: 0;
+      }
     }
 
   }
-  // end of right
-
-  .left {
-    width: 30%;
-    order: -1;
-
-    aside {
-      justify-content: flex-end;
-      background-color: $dark-blue;
-      position: relative;
-      border-left: 30px $ice-blue solid;
-
-      img {
-        position: relative;
-        left: -50px;
-        top: -10px;
-        margin-right: -20px;
-      }
-
-      .content {
-        width: 90%;
-        padding: 0px 15px 40px 0px;
-        color: white;
-
-        h3 {
-          font-size: 2rem;
-          color: $dandelion;
-          letter-spacing: 0.3rem;
-          margin-top: 40px;
-        }
-
-        li{
-          list-style-position: inside;
-          line-height: 3.3rem;
-          letter-spacing: 1px;
-        }
-      }
-
-    }
-
-  }
-
-
-
-
-
-
+  //end of main
 }
-// the end
+// end of post page
