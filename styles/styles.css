@@ -250,18 +250,21 @@ body {
   font-size: 2.0rem;
 }
 
+.meta,
 p {
   line-height: 2.8rem;
   letter-spacing: 1px;
 }
 
 @media (max-width: 1024px) {
+  .meta,
   p {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 640px) {
+  .meta,
   p {
     font-size: 1.6rem;
     line-height: 1.4em;
@@ -890,7 +893,7 @@ footer p {
 }
 
 .post header {
-  background: url("/assets/blog-header.jpg") center/cover;
+  background: url("../assets/blog-header.jpg") center/cover;
   padding-top: 60px;
 }
 
@@ -931,13 +934,37 @@ footer p {
 
 .post .right article .content {
   border-left: solid #FDD908 4px;
-  padding: 80px;
+  padding: 80px 80px 100px 120px;
 }
 
 .post .right article .content h1 {
   font-size: 3.8rem;
   line-height: 3.8rem;
   color: #0D457F;
+  margin-bottom: 20px;
+}
+
+.post .right article .content p {
+  margin-top: 40px;
+}
+
+.post .right .comments h2 {
+  margin-bottom: 30px;
+}
+
+.post .right .comments .comment {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.post .right .comments .comment img {
+  width: 20%;
+}
+
+.post .right .comments .comment text {
+  width: 50%;
 }
 
 .post .right form {
@@ -1036,6 +1063,21 @@ footer p {
 
 .post .left aside .content {
   width: 90%;
+  padding: 0px 15px 40px 0px;
+  color: white;
+}
+
+.post .left aside .content h3 {
+  font-size: 2rem;
+  color: #FDD908;
+  letter-spacing: 0.3rem;
+  margin-top: 40px;
+}
+
+.post .left aside .content li {
+  list-style-position: inside;
+  line-height: 3.3rem;
+  letter-spacing: 1px;
 }
 
 .contact header {

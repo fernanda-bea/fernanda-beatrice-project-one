@@ -1,11 +1,7 @@
 .post {
 
-  // * {
-  //   border: solid red 1px;
-  // }
-
   header {
-      @include header('/assets/blog-header.jpg');
+      @include header('../assets/blog-header.jpg');
 
       h2 {
         @include heading(white);
@@ -38,14 +34,38 @@
       .content {
 
         border-left: solid $dandelion 4px;
-        padding: 80px;
+        padding: 80px 80px 100px 120px;
         
         h1 {
           font-size: 3.8rem;
           line-height: 3.8rem;
           color: $dark-blue;
-          // margin: 
+          margin-bottom: 20px;
         }
+
+        p {
+          margin-top: 40px; 
+        }
+      }
+    }
+
+    .comments {
+
+      h2 {
+        margin-bottom: 30px;
+      }
+
+      .comment {
+        flex-direction: column; //this not working
+
+        img {
+          width: 20%;
+        }
+
+        text {
+          width: 50%; //these are just test sizes to notice change
+        }
+
       }
     }
 
@@ -76,13 +96,26 @@
 
       .content {
         width: 90%;
+        padding: 0px 15px 40px 0px;
+        color: white;
+
+        h3 {
+          font-size: 2rem;
+          color: $dandelion;
+          letter-spacing: 0.3rem;
+          margin-top: 40px;
+        }
+
+        li{
+          list-style-position: inside;
+          line-height: 3.3rem;
+          letter-spacing: 1px;
+        }
       }
 
     }
 
   }
-
- 
 
 
 
