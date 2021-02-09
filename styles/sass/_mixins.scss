@@ -32,6 +32,7 @@
 
   input {
     width: 45%;
+    padding: 20px;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -46,6 +47,7 @@
   }
 
   textarea {
+    padding: 20px;
     resize: none;
     width: 100%;
     font-family: 'Roboto';
@@ -99,4 +101,3 @@
     @content;
   }
 }
-
