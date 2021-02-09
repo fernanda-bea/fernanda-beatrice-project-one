@@ -29,19 +29,15 @@ img {
 body {
   background: $ice-blue;
   font-family: 'Roboto', sans-serif;
-  font-size: 2.0rem;
+  font-size: 1.6rem;
 }
 
 .meta,
 p {
-  line-height: 2.8rem;
+  line-height: 2.4rem;
   letter-spacing: 1px;
-  @include tabletMQ {
-    font-size: 2rem;
-  }
   @include mobileMQ {
-  font-size: 1.6rem;
-  line-height: 1.4em;
+    line-height: 1.4em;
   }
 }
 
@@ -112,12 +108,19 @@ h3 {
   color: $dark-blue;
 }
 
+.skip-link { position: absolute; left: -1000px; top: 5px; z-index: 999; background: white; color: black; }
+ 
+.skip-link:focus { left: 5px; margin-top: 0; padding: 3px 20px 0; background-color: $dark-blue; }
+
 // HEADER STYLING
 
 header {
   
   nav {
+
     width: 100%;
+    margin-left: -15px;
+
     @include mobileMQ {
       display: none;
     }
@@ -140,6 +143,7 @@ header {
   }
 
   i {
+
     position: absolute;
     top: 25px;
     right: 25px;
@@ -147,56 +151,65 @@ header {
     color: white;
     text-shadow: 2px 2px 4px black;
     visibility: hidden;
+
     @include mobileMQ {
       visibility: visible;
     }
-  }
 
-  i:hover,
-  i:focus {
-    color: $dandelion;
   }
+  // end of nav
 
   .header-content {
+
     height: 70vh;
     justify-content: space-between;
+
     @include laptopMQ {
       height: 50vh;
     }
+
     @include tabletMQ {
       height: 60vh;
     }
+
     @include tabletpMQ {
       height: 30vh;
     }
+
   }
 
   .header-image {
+
     width: 55%;
     max-width: 900px;
     margin: 6% 0 -15%;
+
     @include laptopMQ {
       max-width: 650px;
     }
+    
     @include tabletMQ {
       width: 53%;
     }
+
   }
 }
 
 // FOOTER
 
 footer {
+
   background-color: $dandelion;
   color: $dark-blue;
   text-align: center;
   padding: 10px 20px;
+
   p {
     line-height: 1em;
     font-size: 1.5rem;
   }
-}
 
+}
 
 // IMPORTING PARTIALS
 
