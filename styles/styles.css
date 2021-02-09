@@ -1188,9 +1188,53 @@ footer p {
           justify-content: space-between;
 }
 
+@media (max-width: 768px) {
+  .contact main .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .contact main .contact-info {
   width: 30%;
   padding: 30px;
+}
+
+@media (max-width: 1024px) {
+  .contact main .contact-info {
+    padding: 0 0 70px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact main .contact-info {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    margin-top: -150px;
+    padding-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact main .contact-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .contact main .contact-info .social-media {
@@ -1199,7 +1243,8 @@ footer p {
 
 .contact main .contact-info .social-media li {
   text-align: center;
-  width: 40px;
+  width: 20%;
+  max-width: 40px;
   display: inline-block;
   font-size: 2.5rem;
 }
@@ -1210,6 +1255,23 @@ footer p {
 
 .contact main .contact-info .address {
   margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .contact main .contact-info .address {
+    margin-top: 15px;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact main .contact-info .address {
+    -webkit-box-ordinal-group: unset;
+        -ms-flex-order: unset;
+            order: unset;
+  }
 }
 
 .contact main form {
@@ -1296,4 +1358,28 @@ footer p {
   border: solid 2px #FDD908;
   background-color: transparent;
   color: white;
+}
+
+@media (max-width: 768px) {
+  .contact main form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact main form {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 90%;
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact main form textarea,
+  .contact main form button,
+  .contact main form input {
+    width: 80%;
+  }
 }
