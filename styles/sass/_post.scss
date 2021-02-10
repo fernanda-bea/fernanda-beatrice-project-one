@@ -35,7 +35,6 @@
       aside {
 
         background-color: $dark-blue;
-        position: relative;
 
         img {
           position: relative;
@@ -69,11 +68,22 @@
           }
 
           li {
+
             list-style-type: none;
             margin-top: 10px;
             list-style-position: inside;
             text-indent: -25px;
             margin-left: 30px;
+
+            a {
+              color: white;
+            }
+
+            a:hover,
+            a:focus {
+              color: $dandelion;
+            }
+            
           }
 
         }
@@ -159,6 +169,10 @@
     .comments {
 
       margin: -90px 100px 0;
+
+      @include w950MQ {
+        margin: -90px 50px 0;
+      }
 
       @include tabletpMQ {
         margin: -90px 0;

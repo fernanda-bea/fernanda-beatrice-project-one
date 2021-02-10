@@ -140,25 +140,31 @@ header {
     a:focus {
       border-bottom: 2px solid $dandelion;
     }
+
   }
+  // end of nav
 
-  i {
+  .hamburger {
 
+    display: none;
     position: absolute;
     top: 25px;
     right: 25px;
     font-size: 3rem;
     color: white;
     text-shadow: 2px 2px 4px black;
-    visibility: hidden;
-
-    @include mobileMQ {
-      visibility: visible;
+    
+    @include mobileMQ {   
+      display: inline-block;
     }
 
   }
-  // end of nav
 
+  .hamburger:focus,
+  .hamburger:hover {
+    color: $dandelion;
+  }
+  
   .header-content {
 
     height: 70vh;
@@ -193,7 +199,9 @@ header {
     }
 
   }
+
 }
+// end of header
 
 // FOOTER
 

@@ -384,20 +384,25 @@ header nav a:focus {
   border-bottom: 2px solid #FDD908;
 }
 
-header i {
+header .hamburger {
+  display: none;
   position: absolute;
   top: 25px;
   right: 25px;
   font-size: 3rem;
   color: white;
   text-shadow: 2px 2px 4px black;
-  visibility: hidden;
 }
 
 @media (max-width: 640px) {
-  header i {
-    visibility: visible;
+  header .hamburger {
+    display: inline-block;
   }
+}
+
+header .hamburger:focus,
+header .hamburger:hover {
+  color: #FDD908;
 }
 
 header .header-content {
@@ -946,7 +951,6 @@ footer p {
 
 .post main .left aside {
   background-color: #0D457F;
-  position: relative;
 }
 
 .post main .left aside img {
@@ -987,6 +991,15 @@ footer p {
   list-style-position: inside;
   text-indent: -25px;
   margin-left: 30px;
+}
+
+.post main .left aside .content li a {
+  color: white;
+}
+
+.post main .left aside .content li a:hover,
+.post main .left aside .content li a:focus {
+  color: #FDD908;
 }
 
 .post main .right {
@@ -1075,6 +1088,12 @@ footer p {
   margin: -90px 100px 0;
 }
 
+@media (max-width: 950px) {
+  .post main .comments {
+    margin: -90px 50px 0;
+  }
+}
+
 @media (max-width: 768px) {
   .post main .comments {
     margin: -90px 0;
@@ -1145,7 +1164,7 @@ footer p {
 
 @media (max-width: 640px) {
   .post main form {
-    padding: 0;
+    padding: 10px 0 0;
   }
 }
 
@@ -1166,7 +1185,7 @@ footer p {
   border-right: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   .post main form input {
     width: 100%;
   }
@@ -1207,8 +1226,15 @@ footer p {
   background-color: #0D457F;
   color: #FDD908;
   border: 2px solid transparent;
+  padding: 10px 20px 7px;
   -webkit-transition: background-color 0.4s ease;
   transition: background-color 0.4s ease;
+}
+
+@media (max-width: 640px) {
+  .post main form button {
+    margin-bottom: 40px;
+  }
 }
 
 .post main form button:hover,
@@ -1245,7 +1271,7 @@ footer p {
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin: 0 0 4% 5%;
-  margin-top: 12vh;
+  margin: 12vh 0 0 0;
   height: 35vh;
 }
 
@@ -1274,7 +1300,7 @@ footer p {
 
 @media (max-width: 1024px) {
   .contact main .contact-info {
-    padding: 0 0 70px 15px;
+    padding: 30px 0 70px 15px;
   }
 }
 
@@ -1285,7 +1311,7 @@ footer p {
             order: 1;
     width: 100%;
     margin-top: -150px;
-    padding-top: 30px;
+    padding: 30px 15px 70px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1301,6 +1327,7 @@ footer p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 40px 15px 70px 30px;
   }
 }
 
@@ -1318,6 +1345,11 @@ footer p {
 
 .contact main .contact-info .social-media a {
   padding: 3px;
+}
+
+.contact main .contact-info .social-media a:focus,
+.contact main .contact-info .social-media a:hover {
+  color: black;
 }
 
 .contact main .contact-info .address {
@@ -1356,7 +1388,7 @@ footer p {
 
 @media (max-width: 640px) {
   .contact main form {
-    padding: 0;
+    padding: 10px 0 0;
   }
 }
 
@@ -1377,7 +1409,7 @@ footer p {
   border-right: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   .contact main form input {
     width: 100%;
   }
@@ -1418,8 +1450,15 @@ footer p {
   background-color: #FDD908;
   color: #0D457F;
   border: 2px solid transparent;
+  padding: 10px 20px 7px;
   -webkit-transition: background-color 0.4s ease;
   transition: background-color 0.4s ease;
+}
+
+@media (max-width: 640px) {
+  .contact main form button {
+    margin-bottom: 40px;
+  }
 }
 
 .contact main form button:hover,
@@ -1432,6 +1471,7 @@ footer p {
 @media (max-width: 768px) {
   .contact main form {
     width: 100%;
+    margin-left: -15px;
   }
 }
 
@@ -1441,7 +1481,6 @@ footer p {
         -ms-flex-pack: center;
             justify-content: center;
     width: 90%;
-    margin-right: 15px;
   }
 }
 
