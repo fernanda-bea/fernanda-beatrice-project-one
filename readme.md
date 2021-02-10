@@ -78,4 +78,4 @@ index.html => /styles/sass/_index.scss
 
 # Project link
 
-[Beatrice Duncan & Fernanda Thiesen - Project 1](https://fernanda-bea.github.io/project1/)
+[Beatrice Duncan & Fernanda Thiesen - Project One](https://fernanda-bea.github.io/fernanda-beatrice-project-one/)
