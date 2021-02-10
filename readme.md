@@ -27,11 +27,15 @@ Only C++ style comments are valid for CSS code.
 ```
 ## Fonts
 
-All fonts should be set using rem values.
+All font sizes should be set using rem values.
+
+```
+font-size: 1.6rem;
+```
 
 ## Colors
 
-All colors should be set as SASS variables, except for black and white that should be set by the name of the color.
+All colors should be set as SASS variables, except for black and white, that should be set by the name of the color.
 
 ```
 color: $dandelion;
@@ -40,25 +44,38 @@ color: $dandelion;
 color: white;
 ```
 
-## Selectors
+## Folders
 
-Selectors should be on a single line, with a space after the last selector, followed by an opening brace. A selector block should end with a closing curly brace that is unindented and on a separate line. A blank line should be placed between each selector block. Selectors should never be indented.
-
-```
-selector {
-}
-
-selector {
-}
-```
-Multiple selectors should each be on a single line, with no space after each comma.
+HTML files should be placed in the root folder.
 
 ```
-selector1,
-selector2,
-selector3,
-selector4 {
-}
+/index.html
+```
+
+Image files should be placed in the assets folder.
+
+```
+/assets/my-image.jpg
+```
+
+CSS files should be placed in the styles folder.
+
+```
+/styles/styles.css
+```
+
+SCSS files should be placed in the sass folder inside the styles folder.
+
+```
+/styles/sass/styles.scss
+```
+
+## Sass
+
+Each HTML file should have it's own .scss file following the name convention below.
+
+```
+index.html => ./styles/sass/index.scss
 ```
 
 # Project link
