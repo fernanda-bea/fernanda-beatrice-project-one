@@ -44,7 +44,7 @@ color: $dandelion;
 color: white;
 ```
 
-## Folders
+## Folders and files
 
 HTML files should be placed in the root folder.
 
@@ -70,12 +70,10 @@ SCSS files should be placed in the sass folder inside the styles folder.
 /styles/sass/styles.scss
 ```
 
-## Sass
-
 Each HTML file should have it's own .scss file following the name convention below.
 
 ```
-index.html => ./styles/sass/index.scss
+index.html => /styles/sass/_index.scss
 ```
 
 # Project link
