@@ -251,6 +251,10 @@ body {
   font-size: 1.6rem;
 }
 
+body.lock-scrollbar {
+  overflow: hidden;
+}
+
 .meta,
 p {
   line-height: 2.4rem;
@@ -359,12 +363,127 @@ h3 {
 
 header nav {
   width: 100%;
+}
+
+header nav #menu {
   margin-left: -15px;
 }
 
+header nav #mobile-menu,
+header nav #menu-toggle:not(.is-active) {
+  display: none;
+}
+
 @media (max-width: 640px) {
-  header nav {
+  header nav #menu {
     display: none;
+  }
+  header nav #menu-toggle:not(.is-active),
+  header nav #menu-toggle.is-active {
+    display: block;
+  }
+}
+
+header nav #menu-toggle {
+  z-index: 30;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+}
+
+header nav #menu-toggle:hover,
+header nav #menu-toggle:focus {
+  color: #FDD908;
+}
+
+header nav #menu-toggle:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+header nav #menu-toggle:before {
+  content: "\f0c9";
+}
+
+header nav #menu-toggle.is-active:before {
+  content: "\f00d";
+}
+
+header nav #mobile-menu {
+  position: fixed;
+  overflow-y: auto;
+  top: 0;
+  right: -100vw;
+  padding: 8em 4em;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0D457F;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav #mobile-menu li {
+  position: relative;
+  top: -30px;
+  opacity: 0;
+}
+
+header nav #mobile-menu li a {
+  font-size: 4rem;
+  color: white;
+  display: block;
+  text-align: center;
+  padding: 20px 0 10px;
+  margin-bottom: 15px;
+}
+
+header nav #mobile-menu.is-active {
+  right: 0;
+  z-index: 20;
+}
+
+header nav #mobile-menu.is-active li {
+  -webkit-animation: 0.5s move ease-in-out forwards;
+          animation: 0.5s move ease-in-out forwards;
+}
+
+@-webkit-keyframes move {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  100% {
+    top: -30px;
+    opacity: 1;
+  }
+}
+
+@keyframes move {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  100% {
+    top: -30px;
+    opacity: 1;
   }
 }
 
@@ -377,32 +496,13 @@ header nav a {
   padding: 10px 0 3px;
   margin: 0 20px;
   border-bottom: 2px solid transparent;
+  -webkit-transition: border 0.3s ease;
+  transition: border 0.3s ease;
 }
 
 header nav a:hover,
 header nav a:focus {
   border-bottom: 2px solid #FDD908;
-}
-
-header .hamburger {
-  display: none;
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  font-size: 3rem;
-  color: white;
-  text-shadow: 2px 2px 4px black;
-}
-
-@media (max-width: 640px) {
-  header .hamburger {
-    display: inline-block;
-  }
-}
-
-header .hamburger:focus,
-header .hamburger:hover {
-  color: #FDD908;
 }
 
 header .header-content {
@@ -493,6 +593,12 @@ footer p {
 
 .home header nav {
   padding-left: 40px;
+}
+
+@media (max-width: 640px) {
+  .home header nav {
+    padding-left: 0;
+  }
 }
 
 .home header h1 {
